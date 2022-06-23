@@ -29,6 +29,7 @@
 
             // Add Bookmark Button to left YT controls
             youtubeLeftControls.appendChild(bookmarkBtn);
+            bookmarkBtn.addEventListener("click", addNewBookmarkEventHandler);
         }
     }
 
