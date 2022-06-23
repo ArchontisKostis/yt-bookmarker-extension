@@ -26,8 +26,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             const currentVideoBookmarks = data[currentVideo] ? JSON.parse(data[currentVideo]): [];
 
             // TODO: view bookmarks
+            console.log("yt");
         })
     } else {
+        console.log("not yt");
         // This code will run if the user is not on a YT video watch page
         // and will update the Extension UI in order to inform the user
         let container = document.getElementsByClassName("container")[0];
