@@ -1,6 +1,7 @@
 (() => {
     let youtubeLeftControls, youtubePlayer;
     let currentVideo = "";
+    let currentVideoBookmarks = [];
 
     chrome.runtime.onMessage.addListener((obj, sender, response) => {
         const {type, value, videoId} = obj;
@@ -33,5 +34,25 @@
         }
     }
 
+    // Bookmark Event Handler Function
+    const addNewBookmarkEventHandler = () => {
+        const currentTime = youtubePlayer.currentTime;
+        const newBookmark = {
+            time: currentTime,
+            desc: "bookmark at " + getTime(currentTime),
+        }
+        console.log(newBookmark);
+        chrome.storage.sync.set({
+            [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark].sort((a, b) => a.time - b.time))
+        })
+    }
+
     newVideoLoaded();
 })();
+
+const getTime = t => {
+    var date = new Date(0);
+    date.setSeconds(t);
+
+    return date.toISOString().substring(11, 8);
+}
