@@ -13,6 +13,7 @@ const addNewBookmark = (bookmarksElement, bookmark) => {
     newBookmarkElement.id = "bookmark-" + bookmark.time;
     newBookmarkElement.className = "bookmark";
     newBookmarkElement.setAttribute("timestamp", bookmark.time);
+    console.log(bookmark.time);
 
     // Add bookmark to ui
     newBookmarkElement.appendChild(bookmarkTitleElement);
