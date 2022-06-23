@@ -31,4 +31,6 @@
             youtubeLeftControls.appendChild(bookmarkBtn);
         }
     }
+
+    newVideoLoaded();
 })();
