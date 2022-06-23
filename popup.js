@@ -1,7 +1,23 @@
 import { getCurrentTab } from "./utils.js";
 
 // adding a new bookmark row to the popup
-const addNewBookmark = () => {};
+const addNewBookmark = (bookmarksElement, bookmark) => {
+    // Create Bookmark UI elements
+    const bookmarkTitleElement = document.createElement("div");
+    const newBookmarkElement = document.createElement("div");
+
+    // Edit attributes
+    bookmarkTitleElement.textContent = bookmark.desc;
+    bookmarkTitleElement.className = "bookmark-title";
+
+    newBookmarkElement.id = "bookmark-" + bookmark.time;
+    newBookmarkElement.className = "bookmark";
+    newBookmarkElement.setAttribute("timestamp", bookmark.time);
+
+    // Add bookmark to ui
+    newBookmarkElement.appendChild(bookmarkTitleElement);
+    bookmarksElement.appendChild(newBookmarkElement);
+};
 
 const viewBookmarks = (currentBookmarks=[]) => {
     // Get popup ui bookmarks element
