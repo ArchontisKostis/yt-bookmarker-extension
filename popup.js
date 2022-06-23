@@ -3,7 +3,20 @@ import { getCurrentTab } from "./utils.js";
 // adding a new bookmark row to the popup
 const addNewBookmark = () => {};
 
-const viewBookmarks = () => {};
+const viewBookmarks = (currentBookmarks=[]) => {
+    // Get popup ui bookmarks element
+    const bookmarkElement = document.getElementById("bookmarks");
+    bookmarkElement.innerHTML = "";
+
+    if(currentBookmarks.length > 0){
+        for(let i=0; i<currentBookmarks.length; i++){
+            const bookmark = currentBookmarks[i];
+            addNewBookmark(bookmarkElement, bookmark);
+        }
+    } else {
+        bookmarkElement.innerHTML = '<i class=row>No bookmarks to show</i>';
+    }
+};
 
 const onPlay = e => {};
 
@@ -25,11 +38,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         chrome.storage.sync.get([currentVideo], (data) => {
             const currentVideoBookmarks = data[currentVideo] ? JSON.parse(data[currentVideo]): [];
 
-            // TODO: view bookmarks
-            console.log("yt");
+            viewBookmarks(currentVideoBookmarks);
         })
     } else {
-        console.log("not yt");
         // This code will run if the user is not on a YT video watch page
         // and will update the Extension UI in order to inform the user
         let container = document.getElementsByClassName("container")[0];
