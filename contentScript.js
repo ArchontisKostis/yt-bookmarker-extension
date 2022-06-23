@@ -12,7 +12,7 @@
     });
 
     // newVideoLoaded function
-    const newVideoLoaded = () => {
+    const newVideoLoaded = async () => {
         const bookmarkBtnExists = document.getElementsByClassName("bookmark-btn")[0];
         
         if(!bookmarkBtnExists){
