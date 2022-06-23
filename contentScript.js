@@ -68,6 +68,6 @@ const getTime = t => {
     var date = new Date(0);
     date.setSeconds(t);
     console.log("noSubString" + date.toISOString())
-    console.log("getTime" + date.toISOString().substring(12, 19));
+    console.log("getTime" + date.toISOString().substring(11, 18));
     return date.toISOString().substring(11, 8);
 }
