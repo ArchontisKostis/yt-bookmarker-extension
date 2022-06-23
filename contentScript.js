@@ -67,6 +67,7 @@
 const getTime = t => {
     var date = new Date(0);
     date.setSeconds(t);
-    console.log("getTime" + date);
-    return date.toISOString().substring(11, 8);
+    console.log("getTime" + date.toISOString());
+    console.log("getTimetoString" + date.toTimeString());
+    return date.toTimeString();
 }
