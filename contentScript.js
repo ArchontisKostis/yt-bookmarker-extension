@@ -12,10 +12,20 @@
         }
     });
 
+   // Fetch saved bookmarks function
+   const fetchBookmarks = () => {
+    return new Promise((resolve) => {
+        chrome.storage.sync.get([currentVideo], (obj) => {
+            resolve(obj[currentVideo] ? JSON.parse(obj[currentVideo]) : []);
+        })
+    })
+   }
+
     // newVideoLoaded function
     const newVideoLoaded = async () => {
         const bookmarkBtnExists = document.getElementsByClassName("bookmark-btn")[0];
-        
+        currentVideoBookmarks = await fetchBookmarks();
+
         if(!bookmarkBtnExists){
             // Create Bookmark Button
             const bookmarkBtn = document.createElement("img");
@@ -35,13 +45,15 @@
     }
 
     // Bookmark Event Handler Function
-    const addNewBookmarkEventHandler = () => {
+    const addNewBookmarkEventHandler = async () => {
         const currentTime = youtubePlayer.currentTime;
         const newBookmark = {
             time: currentTime,
             desc: "bookmark at " + getTime(currentTime),
         }
-        console.log(newBookmark);
+
+        currentVideoBookmarks = await fetchBookmarks();
+
         chrome.storage.sync.set({
             [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark].sort((a, b) => a.time - b.time))
         })
