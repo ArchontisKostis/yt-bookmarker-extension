@@ -52,8 +52,6 @@
             desc: "bookmark at " + getTime(currentTime),
         }
 
-        console.log("content " + getTime(currentTime));
-
         currentVideoBookmarks = await fetchBookmarks();
 
         chrome.storage.sync.set({
@@ -67,7 +65,6 @@
 const getTime = t => {
     var date = new Date(0);
     date.setSeconds(t);
-    console.log("noSubString" + date.toISOString())
-    console.log("getTime" + date.toISOString().substring(11, 19));
+
     return date.toISOString().substring(11, 19);
 }
