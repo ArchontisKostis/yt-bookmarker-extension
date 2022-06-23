@@ -31,6 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         // This code will run if the user is not on a YT video watch page
         // and will update the Extension UI in order to inform the user
         let container = document.getElementsByClassName("container")[0];
-        container.innerHTML = '<div class="title> This is not a YouTube video page.</div>';
+        container.innerHTML = '<div class="title"> This is not a YouTube video page.</div>';
     }
 });
