@@ -35,6 +35,14 @@
   padding: 3px;
   padding-bottom: 7px;
   margin-bottom: 7px;
+  transition: all 0.2s ease-in;
+
+}
+
+.bookmark:hover {
+  cursor: pointer;
+  background-color: rgb(229, 229, 229); 
+  
 }
 
 .bookmark-title {
