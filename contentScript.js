@@ -10,6 +10,9 @@
             currentVideo = videoId;
             newVideoLoaded();
         }
+        if(type === "PLAY"){
+            youtubePlayer.currentTime = value;
+        }
     });
 
    // Fetch saved bookmarks function

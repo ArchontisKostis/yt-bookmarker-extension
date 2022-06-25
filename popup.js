@@ -5,17 +5,25 @@ const addNewBookmark = (bookmarksElement, bookmark) => {
     // Create Bookmark UI elements
     const bookmarkTitleElement = document.createElement("div");
     const newBookmarkElement = document.createElement("div");
+    const controlsElement = document.createElement("div");
 
     // Edit attributes
+    // Bookmark Title
     bookmarkTitleElement.textContent = bookmark.desc;
     bookmarkTitleElement.className = "bookmark-title";
 
+    // Controls
+    controlsElement.className = "bookmark-controls";
+
+    // New Bookmark
     newBookmarkElement.id = "bookmark-" + bookmark.time;
     newBookmarkElement.className = "bookmark";
     newBookmarkElement.setAttribute("timestamp", bookmark.time);
 
+    setBookmarkAttributes("play", onPlay, controlsElement);
     // Add bookmark to ui
     newBookmarkElement.appendChild(bookmarkTitleElement);
+    newBookmarkElement.appendChild(controlsElement);
     bookmarksElement.appendChild(newBookmarkElement);
 };
 
@@ -34,11 +42,29 @@ const viewBookmarks = (currentBookmarks=[]) => {
     }
 };
 
-const onPlay = e => {};
+const onPlay = async e => {
+    const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
+    const activeTab = await getActiveTabURL();
+    // Send message to content script
+    chrome.tabs.sendMessage(activeTab.id, {
+        type: "PLAY",
+        value: bookmarkTime
+    })
+};
 
 const onDelete = e => {};
 
-const setBookmarkAttributes =  () => {};
+const setBookmarkAttributes =  (src, eventListener, controlParentElement) => {
+    // Create Control Element
+    const controlElement = document.createElement("img");
+    controlElement.src = "assets/" + src + ".png";
+    controlElement.title = src;
+
+    // Add Event Listener
+    controlElement.addEventListener("click", eventListener);
+
+    controlParentElement.appendChild(controlElement);
+};
 
 document.addEventListener("DOMContentLoaded", async () => {
     // Get the active tab and the search params
