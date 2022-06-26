@@ -1,12 +1,21 @@
+body {
+  background-color: #171717;
+  font-family: sans-serif;
+}
+
 .container {
     width: 280px;
-    color: #314d3e;
+    color: #fff;
+}
+
+#appLogo {
+  padding: 1em 1em 1em 0.5em;
 }
 
 .title {
   font-size: 14px;
   font-weight: bold;
-  padding: 8px;
+  padding: 8px 8px 0 8px;
 }
 
 .textbox {
@@ -28,20 +37,22 @@
 
 .bookmark {
   display: flex;
-  border-bottom-color: #00254d;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  align-items: center;
+  background-color: #da0037ff;
+  box-shadow: 0px 0px 5px 5px #DA0037;
   border-radius: 0.8rem;
+  box-sizing: border-box;
   padding: 3px;
   padding-bottom: 7px;
   margin-bottom: 7px;
-  transition: all 0.2s ease-in;
+  margin: 25px 0;
+  transition: transform 0.2s ease-in-out;
 
 }
 
 .bookmark:hover {
   cursor: pointer;
-  background-color: rgb(229, 229, 229); 
+  transform: translateX(0.5em);
   
 }
 
@@ -51,9 +62,17 @@
 
 .bookmark-controls img {
   margin: 0 4px;
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+}
+
+.bookmark-controls img:nth-child(1):hover {
+  content: url("assets/playHover.png");
+}
+
+.bookmark-controls img:nth-child(2):hover {
+  content: url("assets/deleteHover.png");
 }
 
 .bookmark-controls {
