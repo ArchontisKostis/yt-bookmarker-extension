@@ -11,6 +11,16 @@ This extension uses the following (chrome) API's:
 - [Storage](https://developer.chrome.com/docs/extensions/reference/storage/)
 
 ## How to use the Extension
+### First things first
 When you add the extension to chrome and navigate to a YouTube video page you will see the Add Bookmark icon just next to the left YouTube video controls.
 
 <img src='https://github.com/ArchontisKostis/yt-bookmarker-extension/blob/v1.0.0/assets/tutorialIcon.png' style='height: 400px'>
+
+To save a Timestamp just click on this icon! <br>
+
+If you want to see your saved bookmarks follow these steps:
+- When at Google Chrome click on the Extensions Icon (hint it is a puzzle icon)
+- On the popup menu find the YT Bookmarker Extension and click on it.
+- This will reveal the extensions user interface. If you have saved any bookmarks for a video they will be displayed there.
+- You can "pin" the extension to have it always appear next to chrome's search bar. Don't know how to do it? [See how to pin an extension](www.google.com)
+<img src='https://github.com/ArchontisKostis/yt-bookmarker-extension/blob/v1.0.0/assets/tutorialExtensionsIcon.png' style='height: 400px'>
