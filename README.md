@@ -49,7 +49,9 @@ To download and install it you have to follow these steps:
 The Extension was designed and developed by me, Archontis Kostis. <br>
 The icons for the extension are all provided by [Bootstrap Icons](https://icons.getbootstrap.com/). <br>
 The videos that are displayed on the Use Guide **are not mine** but from an incredible YouTube creator called [Fireship](https://www.youtube.com/c/Fireship). <br>
-To create the logo and edit the apps icons I used the Open-Source vector graphics Software [Inkscape](https://inkscape.org/).
+To create the logo and edit the apps icons I used the Open-Source vector graphics Software [Inkscape](https://inkscape.org/). <br>
+This is my first Chrome Extension. I hope you like it and find it useful. If you did, please give this repo a ⭐star. <br>
+If you found a bug please either contact me or open an issue on GitHub.
 
 ## This is a BETA version of the Extension and may not work 100% properly.
 
