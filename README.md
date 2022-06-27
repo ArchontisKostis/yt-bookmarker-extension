@@ -45,23 +45,11 @@ To download and install it you have to follow these steps:
 4. You can now view your Saved Bookmarks!
 5. Click on the <i>Play</i> icon, to instantly navigate to the selected bookmark, or click the <i>Delete</i> icon to delete a bookmark.<img src='https://github.com/ArchontisKostis/yt-bookmarker-extension/blob/v1.0.0/assets/uiControls.png' style='height: 400px'>
 
+## Credits
+The Extension was designed and developed by me, Archontis Kostis. <br>
+The icons for the extension are all provided by [Bootstrap Icons](https://icons.getbootstrap.com/). <br>
+The videos that are displayed on the Use Guide **are not mine** but from an incredible YouTube creator called [Fireship](https://www.youtube.com/c/Fireship). <br>
+To create the logo and edit the apps icons I used the Open-Source vector graphics Software [Inkscape](https://inkscape.org/).
 
-
-
-
-
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------------
-When you add the extension to chrome and navigate to a YouTube video page you will see the Add Bookmark icon just next to the left YouTube video controls.
-
-
-
-To save a Timestamp just click on this icon! <br>
-
-If you want to see your saved bookmarks follow these steps:
-- When at Google Chrome click on the Extensions Icon (hint it is a puzzle icon)
-- On the popup menu find the YT Bookmarker Extension and click on it.
-- This will reveal the extensions user interface. If you have saved any bookmarks for a video they will be displayed there.
-- You can "pin" the extension to have it always appear next to chrome's search bar. Don't know how to do it? [See how to pin an extension](www.google.com)
+## This is a BETA version of the Extension and may not work 100% properly.
 
