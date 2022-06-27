@@ -1,4 +1,4 @@
-# <img src='https://github.com/ArchontisKostis/yt-bookmarker-extension/blob/main/assets/logoHQ.png' style='height: 50px'>
+# <img src='https://github.com/ArchontisKostis/yt-bookmarker-extension/blob/main/assets/logoHQ.png' style='height: 100px;'>
 ## Table of Contents
 1. [About](#About)
 2. [API's](#APIs)
