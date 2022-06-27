@@ -1,5 +1,6 @@
 html {
   cursor: pointer;
+  overflow-y:scroll;
 }
 
 body {
@@ -7,12 +8,14 @@ body {
   font-family: sans-serif;
   cursor: default;
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
+  box-sizing: border-box;
 }
 
 /* CUSTOM SCROLL BAR */
 ::-webkit-scrollbar {
   width: 10px;
+
 }
 
 /* Track */
@@ -29,12 +32,10 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #ae002c; 
-  cursor: grab;
+  
 }
 
-::-webkit-scrollbar-thumb:active {
-  cursor: grabbing;
-}
+
 
 .container {
     width: 300px;
