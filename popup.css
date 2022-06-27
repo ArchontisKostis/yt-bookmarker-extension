@@ -1,7 +1,41 @@
+html {
+  cursor: pointer;
+  overflow-y:scroll;
+}
+
 body {
   background-color: #171717;
   font-family: sans-serif;
+  cursor: default;
+  margin: 0;
+  padding: 0 1em;
+  box-sizing: border-box;
 }
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ededed; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #da0037;
+  height: 10px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ae002c; 
+  
+}
+
+
 
 .container {
     width: 300px;
