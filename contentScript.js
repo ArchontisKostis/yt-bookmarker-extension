@@ -42,13 +42,15 @@
             bookmarkBtn.src = chrome.runtime.getURL("assets/bookmark.png");
             bookmarkBtn.className = "ytp-button " + "bookmark-btn";
             bookmarkBtn.title = "Bookmark current timestamp";
-
+            console.log(youtubeLeftControls);
             // Get YT controls
             youtubeLeftControls = document.getElementsByClassName("ytp-left-controls")[0];
             youtubePlayer = document.getElementsByClassName("video-stream")[0];
-
+            console.log(youtubeLeftControls);
             // Add Bookmark Button to left YT controls
+            
             youtubeLeftControls.appendChild(bookmarkBtn);
+            
             bookmarkBtn.addEventListener("click", addNewBookmarkEventHandler);
         }
     }
