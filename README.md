@@ -7,6 +7,7 @@
     - [Pin the Extension](#Pin-the-extension-for-easy-access)
     - [How to Use](#How-to-use)
 4. [Credits](#Credits)
+5. [Notes](#Notes)
 
 ## About
 The YTBookmarker extension helps you save time when watching a YouTube Video. It makes every video on YouTube behave like a book where you can easily bookmark a specific spot. After bookmarking a spot you can easily navigate to this individual timestamp whenever you want. <br><br>
@@ -49,9 +50,12 @@ To download and install it you have to follow these steps:
 The Extension was designed and developed by me, Archontis Kostis. <br>
 The icons for the extension are all provided by [Bootstrap Icons](https://icons.getbootstrap.com/). <br>
 The videos that are displayed on the Use Guide **are not mine** but from an incredible YouTube creator called [Fireship](https://www.youtube.com/c/Fireship). <br>
-To create the logo and edit the apps icons I used the Open-Source vector graphics Software [Inkscape](https://inkscape.org/). <br>
+To create the logo and edit the apps icons I used the Open-Source vector graphics Software [Inkscape](https://inkscape.org/). <br><br>
+
+## Notes
+### This is a BETA version of the Extension and may not work 100% properly.
 This is my first Chrome Extension. I hope you like it and find it useful. If you did, please give this repo a ⭐star. <br>
 If you found a bug please either contact me or open an issue on GitHub.
 
-## This is a BETA version of the Extension and may not work 100% properly.
+
 
