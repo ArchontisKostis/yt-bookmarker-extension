@@ -58,8 +58,12 @@ const onDelete = async e => {
     const activeTab = await getCurrentTab();
     const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
     const elementToDelete = document.getElementById("bookmark-" + bookmarkTime);
+    const body = document.querySelector('body');
+    const html = document.querySelector('html');
 
     elementToDelete.parentNode.removeChild(elementToDelete);
+    body.style.height = 'min-content';
+    html.style.height = 'min-content';
 
     // Sent message to contentscript
     chrome.tabs.sendMessage(activeTab.id, {
