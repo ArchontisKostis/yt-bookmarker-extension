@@ -3,6 +3,27 @@ body {
   font-family: sans-serif;
 }
 
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ededed; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #da0037;
+  height: 10px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ae002c; 
+}
+
 .container {
     width: 300px;
     color: #fff;
