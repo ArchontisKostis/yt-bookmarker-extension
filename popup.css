@@ -1,6 +1,13 @@
+html {
+  cursor: pointer;
+}
+
 body {
   background-color: #171717;
   font-family: sans-serif;
+  cursor: default;
+  margin: 0;
+  padding: 0;
 }
 
 /* CUSTOM SCROLL BAR */
@@ -22,6 +29,11 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #ae002c; 
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
 }
 
 .container {
