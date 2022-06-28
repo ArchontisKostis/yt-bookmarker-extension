@@ -97,7 +97,6 @@ const toggleDarkLightMode = () => {
     button.classList.toggle('light-mode-toggle');
 
     if(document.contains(noBookmarksComment)){
-        console.log("in if");
         noBookmarksComment.classList.toggle('light-mode-noBookmarks');
     }
 }
