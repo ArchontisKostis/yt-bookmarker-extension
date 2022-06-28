@@ -84,16 +84,16 @@ const setBookmarkAttributes =  (src, eventListener, controlParentElement) => {
     controlParentElement.appendChild(controlElement);
 };
 
-const toggleDarkLightMode = (button) => {
+const toggleDarkLightMode = () => {
     const body = document.querySelector('body');
     const title = document.getElementsByClassName('title')[0];
     const logoImage = document.getElementById('appLogo');
-    const bookmark = document.getElementsByClassName('bookmark');
+    const button = document.querySelector('button');
 
     body.classList.toggle('light-mode-body');
     title.classList.toggle('light-mode-title');
     logoImage.classList.toggle('light-mode-logo');
-    
+    button.classList.toggle('light-mode-toggle');
 }
 
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const currentVideo = urlParameters.get("v");
 
     const darkLightModeBtn = document.querySelector('button');
-    darkLightModeBtn.addEventListener('click', toggleDarkLightMode.bind(darkLightModeBtn), false);
+    darkLightModeBtn.addEventListener('click', toggleDarkLightMode, false);
 
     // Check if user is watching a YT video
     if(activeTab.url.includes("youtube.com/watch") && currentVideo){

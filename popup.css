@@ -40,6 +40,31 @@ body {
     color: #fff;
 }
 
+#header {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mode-toggle {
+  background: transparent url(assets/lightModeIcon.png) no-repeat center;  /* background-color background-image background-repeat background-position */
+  border: none;
+  width: 30px;
+}
+
+.mode-toggle:hover {
+  cursor: pointer;
+}
+
+.light-mode-toggle{
+  cursor: pointer;
+}
+
+.light-mode-toggle {
+  background-image: url(assets/darkModeIcon.png);
+}
+
 #appLogo {
   padding: 1em 1em 1em 0.5em;
 }
