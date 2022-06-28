@@ -112,6 +112,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const currentVideo = urlParameters.get("v");
 
+    const popupTitle = document.getElementsByClassName('title')[0]
+    const bookmarks =document.getElementById('bookmarks');
     const darkLightModeBtn = document.querySelector('button');
     darkLightModeBtn.addEventListener('click', toggleDarkLightMode, false);
 
@@ -123,10 +125,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             viewBookmarks(currentVideoBookmarks);
         })
-    } else {
+    } 
+    else {
         // This code will run if the user is not on a YT video watch page
         // and will update the Extension UI in order to inform the user
-        let popupTitle = document.getElementsByClassName('title')[0]
+
         popupTitle.textContent = 'This is not a YouTube video page.';
+        bookmarks.innerHTML = '<i class=row id="noBookmarks">Go to YouTube and watch a video to save bookmarks.';
+    }
+
+    // If user is on YT but now watching a video
+    if(activeTab.url.includes("youtube.com/") && !activeTab.url.includes("/watch")){
+        popupTitle.textContent = 'Great!';
+        bookmarks.innerHTML = '<i class=row id="noBookmarks">You are on YouTube. <br> Start watching a video to save your bookmarks!</i>';
     }
 });
