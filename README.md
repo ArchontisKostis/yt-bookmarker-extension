@@ -15,6 +15,9 @@ All bookmarks are synced with your Google Chrome account, so you can view the bo
 
 The extension currently works only on Google Chrome.
 
+### New Feature!
+I added a Dark/Light mode toggler. (on v1.1.5)
+
 ## APIs
 This extension uses the following (chrome) API's:
 - [Tabs](https://developer.chrome.com/docs/extensions/reference/tabs/)
