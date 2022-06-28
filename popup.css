@@ -35,8 +35,6 @@ body {
   
 }
 
-
-
 .container {
     width: 300px;
     color: #fff;
@@ -73,7 +71,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #da0037ff;
-  box-shadow: 0px 0px 5px 5px #DA0037;
+  box-shadow: 0px 0px 2px 5px #DA0037;
   border-radius: 0.8rem;
   box-sizing: border-box;
   padding: 3px;
@@ -112,4 +110,21 @@ body {
 .bookmark-controls {
   flex: auto;
   text-align: right;
+}
+
+/* Light Mode */
+.light-mode-body {
+  background-color: #fff;
+}
+
+.light-mode-logo {
+  content: url("assets/logoDarkMode.png");
+}
+
+.light-mode-title {
+  color: #DA0037;
+}
+
+.light-mode-body::-webkit-scrollbar-track {
+  background: #bababa; 
 }
