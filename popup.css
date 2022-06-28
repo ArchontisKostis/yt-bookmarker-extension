@@ -96,13 +96,10 @@ body {
   display: flex;
   align-items: center;
   background-color: #da0037ff;
-  box-shadow: 0px 0px 2px 5px #DA0037;
   border-radius: 50px;
   box-sizing: border-box;
-  padding: 3px;
-  padding-bottom: 7px;
-  margin-bottom: 7px;
-  margin: 25px 0;
+  padding: 10px;
+  margin: 10px 0;
   transition: transform 0.2s ease-in-out;
 
 }
