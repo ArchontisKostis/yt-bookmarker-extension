@@ -150,6 +150,10 @@ body {
   color: #DA0037;
 }
 
+.light-mode-noBookmarks {
+  color: #da0037;
+}
+
 .light-mode-body::-webkit-scrollbar-track {
   background: #bababa; 
 }

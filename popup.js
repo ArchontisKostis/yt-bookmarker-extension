@@ -40,7 +40,7 @@ const viewBookmarks = (currentBookmarks=[]) => {
             addNewBookmark(bookmarkElement, bookmark);
         }
     } else {
-        bookmarkElement.innerHTML = '<i class=row>No bookmarks to show</i>';
+        bookmarkElement.innerHTML = '<i class=row id="noBookmarks">No bookmarks to show</i>';
     }
 };
 
@@ -87,6 +87,7 @@ const setBookmarkAttributes =  (src, eventListener, controlParentElement) => {
 const toggleDarkLightMode = () => {
     const body = document.querySelector('body');
     const title = document.getElementsByClassName('title')[0];
+    const noBookmarksComment = document.getElementById('noBookmarks');
     const logoImage = document.getElementById('appLogo');
     const button = document.querySelector('button');
 
@@ -94,6 +95,11 @@ const toggleDarkLightMode = () => {
     title.classList.toggle('light-mode-title');
     logoImage.classList.toggle('light-mode-logo');
     button.classList.toggle('light-mode-toggle');
+
+    if(document.contains(noBookmarksComment)){
+        console.log("in if");
+        noBookmarksComment.classList.toggle('light-mode-noBookmarks');
+    }
 }
 
 
