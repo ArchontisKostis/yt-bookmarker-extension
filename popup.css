@@ -50,7 +50,7 @@ body {
 .mode-toggle {
   background: transparent url(assets/lightModeIcon.png) no-repeat center;  /* background-color background-image background-repeat background-position */
   border: none;
-  width: 30px;
+  width: 35px;
 }
 
 .mode-toggle:hover {
