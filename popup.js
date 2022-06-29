@@ -20,8 +20,8 @@ const addNewBookmark = (bookmarksElement, bookmark) => {
     newBookmarkElement.className = "bookmark";
     newBookmarkElement.setAttribute("timestamp", bookmark.time);
 
-    setBookmarkAttributes("play", onPlay, controlsElement);
-    setBookmarkAttributes("delete", onDelete, controlsElement);
+    setBookmarkAttributes("bi-play-fill", onPlay, controlsElement, "Play");
+    setBookmarkAttributes("bi-trash-fill", onDelete, controlsElement, "Delete");
 
     // Add bookmark to ui
     newBookmarkElement.appendChild(bookmarkTitleElement);
@@ -72,11 +72,13 @@ const onDelete = async e => {
     }, viewBookmarks);
 };
 
-const setBookmarkAttributes =  (src, eventListener, controlParentElement) => {
+const setBookmarkAttributes =  (className, eventListener, controlParentElement, title) => {
     // Create Control Element
-    const controlElement = document.createElement("img");
-    controlElement.src = "assets/" + src + ".png";
-    controlElement.title = src;
+    const controlElement = document.createElement("i");
+    controlElement.classList.add('bi');
+    controlElement.classList.add(className);
+    controlElement.id = 'bookmarkControls';
+    controlElement.title = title;
 
     // Add Event Listener
     controlElement.addEventListener("click", eventListener);
@@ -89,17 +91,17 @@ const toggleDarkLightMode = () => {
     const title = document.getElementsByClassName('title')[0];
     const noBookmarksComment = document.getElementById('noBookmarks');
     const logoImage = document.getElementById('appLogo');
-    const button = document.querySelector('button');
+    const button = document.querySelector('i');
 
     body.classList.toggle('light-mode-body');
     title.classList.toggle('light-mode-title');
     logoImage.classList.toggle('light-mode-logo');
-    button.classList.toggle('light-mode-toggle');
 
     if(document.contains(noBookmarksComment)){
         noBookmarksComment.classList.toggle('light-mode-noBookmarks');
     }
 }
+
 
 
 

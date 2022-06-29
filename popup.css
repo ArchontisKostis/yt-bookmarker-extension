@@ -26,7 +26,6 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #da0037;
-  height: 10px; 
 }
 
 /* Handle on hover */
@@ -45,16 +44,34 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .mode-toggle {
-  background: transparent url(assets/lightModeIcon.png) no-repeat center;  /* background-color background-image background-repeat background-position */
+  background-color: #da0037;
+  color: white;
   border: none;
-  width: 35px;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s ease-in;
 }
+
+/* .mode-toggle:hover {
+  cursor: pointer;
+  outline: 2px solid #da0037;
+  background-color: transparent;
+  color: #da0037;
+} */
 
 .mode-toggle:hover {
   cursor: pointer;
+  background-color: #b4002d;
+  color: rgb(208, 208, 208);
+}
+
+.mode-toggle:active {
+  background-color: #7c0422;
 }
 
 .light-mode-toggle{
@@ -98,7 +115,7 @@ body {
   background-color: #da0037ff;
   border-radius: 50px;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 15px;
   margin: 10px 0;
   transition: transform 0.2s ease-in-out;
 
@@ -114,11 +131,22 @@ body {
   padding-left: 2px;
 }
 
-.bookmark-controls img {
-  margin: 0 4px;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
+#bookmarkControls {
+  background-color: #fff;
+  color: #DA0037;
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 0.5em;
+  margin: 0.25em;
+  transition: all 0.2s cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+#bookmarkControls:hover {
+  outline: 1.65px solid white;
+  background-color: transparent;
+  color: white;
 }
 
 .bookmark-controls img:nth-child(1):hover {
@@ -153,5 +181,5 @@ body {
 }
 
 .light-mode-body::-webkit-scrollbar-track {
-  background: #bababa; 
+  background: #dfdfdf; 
 }
