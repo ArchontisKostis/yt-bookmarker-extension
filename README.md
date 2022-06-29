@@ -1,7 +1,7 @@
 # <img src='https://github.com/ArchontisKostis/yt-bookmarker-extension/blob/main/assets/logoHQ.png' style='height: 100px;'>
 ## Table of Contents
 1. [About](#About)
-    - [What's New](#what's-new)
+    - [What's New](#whats-new)
 2. [API's](#APIs)
 3. [Installation & Use Guide](#Installation-and-Use-Guide)
     - [Installation](#Installation)
