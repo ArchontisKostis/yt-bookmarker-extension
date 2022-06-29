@@ -15,8 +15,9 @@ All bookmarks are synced with your Google Chrome account, so you can view the bo
 
 The extension currently works only on Google Chrome.
 
-### New Feature!
-I added a Dark/Light mode toggler. (on v1.1.5)
+### What's New
+- I added a Dark/Light mode toggler. (v1.1.5)
+- Replaced bitmap icons with svg icons by BootstrapIcons (v1.1.7)
 
 ## APIs
 This extension uses the following (chrome) API's:
